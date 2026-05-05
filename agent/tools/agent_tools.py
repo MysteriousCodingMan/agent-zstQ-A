@@ -61,7 +61,7 @@ def generater_external_data():
                 comparion: str = arr[4].replace('"', '')
                 time: str = arr[5].replace('"', '')
 
-                if user_id not in external_data():
+                if user_id not in external_data:
                     external_data[user_id] = {}
                     
                 external_data[user_id][time] = {
@@ -73,7 +73,7 @@ def generater_external_data():
 
 @tool(description='获取外部系统中获得指定用户在指定月份的使用记录，以纯字符串形式返回，若未检索到返回空字符串')
 def fetch_external_data(user_id: str, month:str) -> str:
-    generater_external_data
+    generater_external_data()
     
     try:
         return external_data[user_id][month]
@@ -85,4 +85,3 @@ def fetch_external_data(user_id: str, month:str) -> str:
 @tool(description='无入参，无返回值，调用后触发中间件自动为报告生成的场景动态注入上下文信息，为后续提示词切换提供上下文信息')
 def fill_context_for_report():
     return 'fill_context_for_report已调用'
-

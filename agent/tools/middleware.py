@@ -22,7 +22,7 @@ def monitor_tool(
         result = handler(request)
         logger.info(f'[tool monitor]工具：{request.tool_call["args"]}调用成功')
         
-        if request.tool_call["name"] == 'full_context_for_report':
+        if request.tool_call["name"] == 'fill_context_for_report':
             request.runtime.context['report'] = True
         return result
     except Exception as e:
@@ -60,31 +60,3 @@ def retort_prompt_switch(request: ModelRequest):   # 动态切换提示词
         return load_report_prompts
     
     return load_system_prompts()
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
