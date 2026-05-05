@@ -39,7 +39,12 @@ def get_logger(
     
     # 文件handler
     if not log_file:
-        log_file = os.apth.join(LOG_ROOT, F'{name}_{datetime.now().strftime("%Y%m%D")}.log')
+        log_file = os.path.join(LOG_ROOT, F'{name}_{datetime.now().strftime("%Y%m%D")}.log')
+
+# 自动创建日志文件夹
+    log_dir = os.path.dirname(log_file)
+    if not os.path.exists(log_dir):
+        os.makedirs(log_dir, exist_ok=True)
 
     file_handler = logging.FileHandler(log_file, encoding='utf-8')
     file_handler.setLevel(file_level)

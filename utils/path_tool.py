@@ -20,6 +20,6 @@ def get_abs_path(relative_path: str) -> str:
     '''
     传入相对路径，获取绝对路径
     '''
-    project_root = get_abs_path()
+    project_root = get_project_root()
     return os.path.join(project_root, relative_path)
     

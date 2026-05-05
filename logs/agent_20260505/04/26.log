@@ -1,0 +1,326 @@
+2026-05-04 21:54:29,305 - agent - ERROR - vector_store.py:104 - [加载知识库]文件E:\MyProjects\agent-project\agent-zstQA\data\扫地机器人100问.pdf加载失败，错误信息：'PyPDFLoader' object is not iterable
+Traceback (most recent call last):
+  File "e:\MyProjects\agent-project\agent-zstQA\rag\vector_store.py", line 88, in load_document
+    split_documents: list[Document] = self.spliter.split_documents(documents)
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\CodeTools\anaconda\envs\langchainAI\Lib\site-packages\langchain_text_splitters\base.py", line 141, in split_documents
+    for doc in documents:
+TypeError: 'PyPDFLoader' object is not iterable
+2026-05-04 21:54:29,347 - agent - ERROR - vector_store.py:104 - [加载知识库]文件E:\MyProjects\agent-project\agent-zstQA\data\扫地机器人100问2.txt加载失败，错误信息：'TextLoader' object is not iterable
+Traceback (most recent call last):
+  File "e:\MyProjects\agent-project\agent-zstQA\rag\vector_store.py", line 88, in load_document
+    split_documents: list[Document] = self.spliter.split_documents(documents)
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\CodeTools\anaconda\envs\langchainAI\Lib\site-packages\langchain_text_splitters\base.py", line 141, in split_documents
+    for doc in documents:
+TypeError: 'TextLoader' object is not iterable
+2026-05-04 21:54:29,365 - agent - ERROR - vector_store.py:104 - [加载知识库]文件E:\MyProjects\agent-project\agent-zstQA\data\扫拖一体机器人100问.txt加载失败，错误信息：'TextLoader' object is not iterable
+Traceback (most recent call last):
+  File "e:\MyProjects\agent-project\agent-zstQA\rag\vector_store.py", line 88, in load_document
+    split_documents: list[Document] = self.spliter.split_documents(documents)
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\CodeTools\anaconda\envs\langchainAI\Lib\site-packages\langchain_text_splitters\base.py", line 141, in split_documents
+    for doc in documents:
+TypeError: 'TextLoader' object is not iterable
+2026-05-04 21:54:29,384 - agent - ERROR - vector_store.py:104 - [加载知识库]文件E:\MyProjects\agent-project\agent-zstQA\data\故障排除.txt加载失败，错误信息：'TextLoader' object is not iterable
+Traceback (most recent call last):
+  File "e:\MyProjects\agent-project\agent-zstQA\rag\vector_store.py", line 88, in load_document
+    split_documents: list[Document] = self.spliter.split_documents(documents)
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\CodeTools\anaconda\envs\langchainAI\Lib\site-packages\langchain_text_splitters\base.py", line 141, in split_documents
+    for doc in documents:
+TypeError: 'TextLoader' object is not iterable
+2026-05-04 21:54:29,401 - agent - ERROR - vector_store.py:104 - [加载知识库]文件E:\MyProjects\agent-project\agent-zstQA\data\维护保养.txt加载失败，错误信息：'TextLoader' object is not iterable
+Traceback (most recent call last):
+  File "e:\MyProjects\agent-project\agent-zstQA\rag\vector_store.py", line 88, in load_document
+    split_documents: list[Document] = self.spliter.split_documents(documents)
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\CodeTools\anaconda\envs\langchainAI\Lib\site-packages\langchain_text_splitters\base.py", line 141, in split_documents
+    for doc in documents:
+TypeError: 'TextLoader' object is not iterable
+2026-05-04 21:54:29,419 - agent - ERROR - vector_store.py:104 - [加载知识库]文件E:\MyProjects\agent-project\agent-zstQA\data\选购指南.txt加载失败，错误信息：'TextLoader' object is not iterable
+Traceback (most recent call last):
+  File "e:\MyProjects\agent-project\agent-zstQA\rag\vector_store.py", line 88, in load_document
+    split_documents: list[Document] = self.spliter.split_documents(documents)
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\CodeTools\anaconda\envs\langchainAI\Lib\site-packages\langchain_text_splitters\base.py", line 141, in split_documents
+    for doc in documents:
+TypeError: 'TextLoader' object is not iterable
+2026-05-04 21:57:41,936 - agent - ERROR - vector_store.py:104 - [加载知识库]文件E:\MyProjects\agent-project\agent-zstQA\data\扫地机器人100问.pdf加载失败，错误信息：`pypdf` package not found, please install it with `pip install pypdf`
+Traceback (most recent call last):
+  File "D:\CodeTools\anaconda\envs\langchainAI\Lib\site-packages\langchain_community\document_loaders\parsers\pdf.py", line 359, in lazy_parse
+    import pypdf
+ModuleNotFoundError: No module named 'pypdf'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "e:\MyProjects\agent-project\agent-zstQA\rag\vector_store.py", line 82, in load_document
+    documents:list[Document] = get_file_documents(path).load()
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\CodeTools\anaconda\envs\langchainAI\Lib\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\CodeTools\anaconda\envs\langchainAI\Lib\site-packages\langchain_community\document_loaders\pdf.py", line 305, in lazy_load
+    yield from self.parser.lazy_parse(blob)
+  File "D:\CodeTools\anaconda\envs\langchainAI\Lib\site-packages\langchain_community\document_loaders\parsers\pdf.py", line 361, in lazy_parse
+    raise ImportError(
+ImportError: `pypdf` package not found, please install it with `pip install pypdf`
+2026-05-04 21:57:41,953 - agent - ERROR - vector_store.py:104 - [加载知识库]文件E:\MyProjects\agent-project\agent-zstQA\data\扫地机器人100问2.txt加载失败，错误信息：Error loading E:\MyProjects\agent-project\agent-zstQA\data\扫地机器人100问2.txt
+Traceback (most recent call last):
+  File "D:\CodeTools\anaconda\envs\langchainAI\Lib\site-packages\langchain_community\document_loaders\text.py", line 43, in lazy_load
+    text = f.read()
+           ^^^^^^^^
+UnicodeDecodeError: 'gbk' codec can't decode byte 0xab in position 4: illegal multibyte sequence
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "e:\MyProjects\agent-project\agent-zstQA\rag\vector_store.py", line 82, in load_document
+    documents:list[Document] = get_file_documents(path).load()
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\CodeTools\anaconda\envs\langchainAI\Lib\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\CodeTools\anaconda\envs\langchainAI\Lib\site-packages\langchain_community\document_loaders\text.py", line 56, in lazy_load
+    raise RuntimeError(f"Error loading {self.file_path}") from e
+RuntimeError: Error loading E:\MyProjects\agent-project\agent-zstQA\data\扫地机器人100问2.txt
+2026-05-04 21:57:41,969 - agent - ERROR - vector_store.py:104 - [加载知识库]文件E:\MyProjects\agent-project\agent-zstQA\data\扫拖一体机器人100问.txt加载失败，错误信息：Error loading E:\MyProjects\agent-project\agent-zstQA\data\扫拖一体机器人100问.txt
+Traceback (most recent call last):
+  File "D:\CodeTools\anaconda\envs\langchainAI\Lib\site-packages\langchain_community\document_loaders\text.py", line 43, in lazy_load
+    text = f.read()
+           ^^^^^^^^
+UnicodeDecodeError: 'gbk' codec can't decode byte 0xab in position 4: illegal multibyte sequence
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "e:\MyProjects\agent-project\agent-zstQA\rag\vector_store.py", line 82, in load_document
+    documents:list[Document] = get_file_documents(path).load()
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\CodeTools\anaconda\envs\langchainAI\Lib\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\CodeTools\anaconda\envs\langchainAI\Lib\site-packages\langchain_community\document_loaders\text.py", line 56, in lazy_load
+    raise RuntimeError(f"Error loading {self.file_path}") from e
+RuntimeError: Error loading E:\MyProjects\agent-project\agent-zstQA\data\扫拖一体机器人100问.txt
+2026-05-04 21:57:41,974 - agent - ERROR - vector_store.py:104 - [加载知识库]文件E:\MyProjects\agent-project\agent-zstQA\data\故障排除.txt加载失败，错误信息：Error loading E:\MyProjects\agent-project\agent-zstQA\data\故障排除.txt
+Traceback (most recent call last):
+  File "D:\CodeTools\anaconda\envs\langchainAI\Lib\site-packages\langchain_community\document_loaders\text.py", line 43, in lazy_load
+    text = f.read()
+           ^^^^^^^^
+UnicodeDecodeError: 'gbk' codec can't decode byte 0xab in position 2: illegal multibyte sequence
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "e:\MyProjects\agent-project\agent-zstQA\rag\vector_store.py", line 82, in load_document
+    documents:list[Document] = get_file_documents(path).load()
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\CodeTools\anaconda\envs\langchainAI\Lib\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\CodeTools\anaconda\envs\langchainAI\Lib\site-packages\langchain_community\document_loaders\text.py", line 56, in lazy_load
+    raise RuntimeError(f"Error loading {self.file_path}") from e
+RuntimeError: Error loading E:\MyProjects\agent-project\agent-zstQA\data\故障排除.txt
+2026-05-04 21:57:41,976 - agent - ERROR - vector_store.py:104 - [加载知识库]文件E:\MyProjects\agent-project\agent-zstQA\data\维护保养.txt加载失败，错误信息：Error loading E:\MyProjects\agent-project\agent-zstQA\data\维护保养.txt
+Traceback (most recent call last):
+  File "D:\CodeTools\anaconda\envs\langchainAI\Lib\site-packages\langchain_community\document_loaders\text.py", line 43, in lazy_load
+    text = f.read()
+           ^^^^^^^^
+UnicodeDecodeError: 'gbk' codec can't decode byte 0xab in position 4: illegal multibyte sequence
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "e:\MyProjects\agent-project\agent-zstQA\rag\vector_store.py", line 82, in load_document
+    documents:list[Document] = get_file_documents(path).load()
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\CodeTools\anaconda\envs\langchainAI\Lib\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\CodeTools\anaconda\envs\langchainAI\Lib\site-packages\langchain_community\document_loaders\text.py", line 56, in lazy_load
+    raise RuntimeError(f"Error loading {self.file_path}") from e
+RuntimeError: Error loading E:\MyProjects\agent-project\agent-zstQA\data\维护保养.txt
+2026-05-04 21:57:41,976 - agent - ERROR - vector_store.py:104 - [加载知识库]文件E:\MyProjects\agent-project\agent-zstQA\data\选购指南.txt加载失败，错误信息：Error loading E:\MyProjects\agent-project\agent-zstQA\data\选购指南.txt
+Traceback (most recent call last):
+  File "D:\CodeTools\anaconda\envs\langchainAI\Lib\site-packages\langchain_community\document_loaders\text.py", line 43, in lazy_load
+    text = f.read()
+           ^^^^^^^^
+UnicodeDecodeError: 'gbk' codec can't decode byte 0xab in position 2: illegal multibyte sequence
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "e:\MyProjects\agent-project\agent-zstQA\rag\vector_store.py", line 82, in load_document
+    documents:list[Document] = get_file_documents(path).load()
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\CodeTools\anaconda\envs\langchainAI\Lib\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\CodeTools\anaconda\envs\langchainAI\Lib\site-packages\langchain_community\document_loaders\text.py", line 56, in lazy_load
+    raise RuntimeError(f"Error loading {self.file_path}") from e
+RuntimeError: Error loading E:\MyProjects\agent-project\agent-zstQA\data\选购指南.txt
+2026-05-04 21:59:28,517 - agent - ERROR - vector_store.py:104 - [加载知识库]文件E:\MyProjects\agent-project\agent-zstQA\data\扫地机器人100问.pdf加载失败，错误信息：`pypdf` package not found, please install it with `pip install pypdf`
+Traceback (most recent call last):
+  File "D:\CodeTools\anaconda\envs\langchainAI\Lib\site-packages\langchain_community\document_loaders\parsers\pdf.py", line 359, in lazy_parse
+    import pypdf
+ModuleNotFoundError: No module named 'pypdf'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "e:\MyProjects\agent-project\agent-zstQA\rag\vector_store.py", line 82, in load_document
+    documents:list[Document] = get_file_documents(path)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "e:\MyProjects\agent-project\agent-zstQA\rag\vector_store.py", line 63, in get_file_documents
+    return PyPDFLoader(read_path).load()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\CodeTools\anaconda\envs\langchainAI\Lib\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\CodeTools\anaconda\envs\langchainAI\Lib\site-packages\langchain_community\document_loaders\pdf.py", line 305, in lazy_load
+    yield from self.parser.lazy_parse(blob)
+  File "D:\CodeTools\anaconda\envs\langchainAI\Lib\site-packages\langchain_community\document_loaders\parsers\pdf.py", line 361, in lazy_parse
+    raise ImportError(
+ImportError: `pypdf` package not found, please install it with `pip install pypdf`
+2026-05-04 21:59:28,517 - agent - ERROR - vector_store.py:104 - [加载知识库]文件E:\MyProjects\agent-project\agent-zstQA\data\扫地机器人100问2.txt加载失败，错误信息：Error loading E:\MyProjects\agent-project\agent-zstQA\data\扫地机器人100问2.txt
+Traceback (most recent call last):
+  File "D:\CodeTools\anaconda\envs\langchainAI\Lib\site-packages\langchain_community\document_loaders\text.py", line 43, in lazy_load
+    text = f.read()
+           ^^^^^^^^
+UnicodeDecodeError: 'gbk' codec can't decode byte 0xab in position 4: illegal multibyte sequence
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "e:\MyProjects\agent-project\agent-zstQA\rag\vector_store.py", line 82, in load_document
+    documents:list[Document] = get_file_documents(path)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "e:\MyProjects\agent-project\agent-zstQA\rag\vector_store.py", line 60, in get_file_documents
+    return TextLoader(read_path).load()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\CodeTools\anaconda\envs\langchainAI\Lib\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\CodeTools\anaconda\envs\langchainAI\Lib\site-packages\langchain_community\document_loaders\text.py", line 56, in lazy_load
+    raise RuntimeError(f"Error loading {self.file_path}") from e
+RuntimeError: Error loading E:\MyProjects\agent-project\agent-zstQA\data\扫地机器人100问2.txt
+2026-05-04 21:59:28,517 - agent - ERROR - vector_store.py:104 - [加载知识库]文件E:\MyProjects\agent-project\agent-zstQA\data\扫拖一体机器人100问.txt加载失败，错误信息：Error loading E:\MyProjects\agent-project\agent-zstQA\data\扫拖一体机器人100问.txt
+Traceback (most recent call last):
+  File "D:\CodeTools\anaconda\envs\langchainAI\Lib\site-packages\langchain_community\document_loaders\text.py", line 43, in lazy_load
+    text = f.read()
+           ^^^^^^^^
+UnicodeDecodeError: 'gbk' codec can't decode byte 0xab in position 4: illegal multibyte sequence
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "e:\MyProjects\agent-project\agent-zstQA\rag\vector_store.py", line 82, in load_document
+    documents:list[Document] = get_file_documents(path)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "e:\MyProjects\agent-project\agent-zstQA\rag\vector_store.py", line 60, in get_file_documents
+    return TextLoader(read_path).load()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\CodeTools\anaconda\envs\langchainAI\Lib\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\CodeTools\anaconda\envs\langchainAI\Lib\site-packages\langchain_community\document_loaders\text.py", line 56, in lazy_load
+    raise RuntimeError(f"Error loading {self.file_path}") from e
+RuntimeError: Error loading E:\MyProjects\agent-project\agent-zstQA\data\扫拖一体机器人100问.txt
+2026-05-04 21:59:28,517 - agent - ERROR - vector_store.py:104 - [加载知识库]文件E:\MyProjects\agent-project\agent-zstQA\data\故障排除.txt加载失败，错误信息：Error loading E:\MyProjects\agent-project\agent-zstQA\data\故障排除.txt
+Traceback (most recent call last):
+  File "D:\CodeTools\anaconda\envs\langchainAI\Lib\site-packages\langchain_community\document_loaders\text.py", line 43, in lazy_load
+    text = f.read()
+           ^^^^^^^^
+UnicodeDecodeError: 'gbk' codec can't decode byte 0xab in position 2: illegal multibyte sequence
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "e:\MyProjects\agent-project\agent-zstQA\rag\vector_store.py", line 82, in load_document
+    documents:list[Document] = get_file_documents(path)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "e:\MyProjects\agent-project\agent-zstQA\rag\vector_store.py", line 60, in get_file_documents
+    return TextLoader(read_path).load()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\CodeTools\anaconda\envs\langchainAI\Lib\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\CodeTools\anaconda\envs\langchainAI\Lib\site-packages\langchain_community\document_loaders\text.py", line 56, in lazy_load
+    raise RuntimeError(f"Error loading {self.file_path}") from e
+RuntimeError: Error loading E:\MyProjects\agent-project\agent-zstQA\data\故障排除.txt
+2026-05-04 21:59:28,517 - agent - ERROR - vector_store.py:104 - [加载知识库]文件E:\MyProjects\agent-project\agent-zstQA\data\维护保养.txt加载失败，错误信息：Error loading E:\MyProjects\agent-project\agent-zstQA\data\维护保养.txt
+Traceback (most recent call last):
+  File "D:\CodeTools\anaconda\envs\langchainAI\Lib\site-packages\langchain_community\document_loaders\text.py", line 43, in lazy_load
+    text = f.read()
+           ^^^^^^^^
+UnicodeDecodeError: 'gbk' codec can't decode byte 0xab in position 4: illegal multibyte sequence
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "e:\MyProjects\agent-project\agent-zstQA\rag\vector_store.py", line 82, in load_document
+    documents:list[Document] = get_file_documents(path)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "e:\MyProjects\agent-project\agent-zstQA\rag\vector_store.py", line 60, in get_file_documents
+    return TextLoader(read_path).load()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\CodeTools\anaconda\envs\langchainAI\Lib\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\CodeTools\anaconda\envs\langchainAI\Lib\site-packages\langchain_community\document_loaders\text.py", line 56, in lazy_load
+    raise RuntimeError(f"Error loading {self.file_path}") from e
+RuntimeError: Error loading E:\MyProjects\agent-project\agent-zstQA\data\维护保养.txt
+2026-05-04 21:59:28,517 - agent - ERROR - vector_store.py:104 - [加载知识库]文件E:\MyProjects\agent-project\agent-zstQA\data\选购指南.txt加载失败，错误信息：Error loading E:\MyProjects\agent-project\agent-zstQA\data\选购指南.txt
+Traceback (most recent call last):
+  File "D:\CodeTools\anaconda\envs\langchainAI\Lib\site-packages\langchain_community\document_loaders\text.py", line 43, in lazy_load
+    text = f.read()
+           ^^^^^^^^
+UnicodeDecodeError: 'gbk' codec can't decode byte 0xab in position 2: illegal multibyte sequence
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "e:\MyProjects\agent-project\agent-zstQA\rag\vector_store.py", line 82, in load_document
+    documents:list[Document] = get_file_documents(path)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "e:\MyProjects\agent-project\agent-zstQA\rag\vector_store.py", line 60, in get_file_documents
+    return TextLoader(read_path).load()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\CodeTools\anaconda\envs\langchainAI\Lib\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\CodeTools\anaconda\envs\langchainAI\Lib\site-packages\langchain_community\document_loaders\text.py", line 56, in lazy_load
+    raise RuntimeError(f"Error loading {self.file_path}") from e
+RuntimeError: Error loading E:\MyProjects\agent-project\agent-zstQA\data\选购指南.txt
+2026-05-04 22:05:17,819 - agent - ERROR - vector_store.py:107 - [加载知识库]文件E:\MyProjects\agent-project\agent-zstQA\data\扫地机器人100问.pdf加载失败，错误信息：`pypdf` package not found, please install it with `pip install pypdf`
+Traceback (most recent call last):
+  File "D:\CodeTools\anaconda\envs\langchainAI\Lib\site-packages\langchain_community\document_loaders\parsers\pdf.py", line 359, in lazy_parse
+    import pypdf
+ModuleNotFoundError: No module named 'pypdf'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "e:\MyProjects\agent-project\agent-zstQA\rag\vector_store.py", line 85, in load_document
+    documents:list[Document] = get_file_documents(path)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "e:\MyProjects\agent-project\agent-zstQA\rag\vector_store.py", line 66, in get_file_documents
+    return PyPDFLoader(read_path).load()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\CodeTools\anaconda\envs\langchainAI\Lib\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\CodeTools\anaconda\envs\langchainAI\Lib\site-packages\langchain_community\document_loaders\pdf.py", line 305, in lazy_load
+    yield from self.parser.lazy_parse(blob)
+  File "D:\CodeTools\anaconda\envs\langchainAI\Lib\site-packages\langchain_community\document_loaders\parsers\pdf.py", line 361, in lazy_parse
+    raise ImportError(
+ImportError: `pypdf` package not found, please install it with `pip install pypdf`
+2026-05-04 22:05:21,291 - agent - INFO - vector_store.py:103 - [加载知识库]文件E:\MyProjects\agent-project\agent-zstQA\data\扫地机器人100问2.txt加载成功，分割成41个文档，已存入向量数据库
+2026-05-04 22:05:24,417 - agent - INFO - vector_store.py:103 - [加载知识库]文件E:\MyProjects\agent-project\agent-zstQA\data\扫拖一体机器人100问.txt加载成功，分割成47个文档，已存入向量数据库
+2026-05-04 22:05:30,530 - agent - INFO - vector_store.py:103 - [加载知识库]文件E:\MyProjects\agent-project\agent-zstQA\data\故障排除.txt加载成功，分割成100个文档，已存入向量数据库
+2026-05-04 22:05:33,607 - agent - INFO - vector_store.py:103 - [加载知识库]文件E:\MyProjects\agent-project\agent-zstQA\data\维护保养.txt加载成功，分割成51个文档，已存入向量数据库
+2026-05-04 22:05:36,608 - agent - INFO - vector_store.py:103 - [加载知识库]文件E:\MyProjects\agent-project\agent-zstQA\data\选购指南.txt加载成功，分割成48个文档，已存入向量数据库
+2026-05-04 22:25:10,702 - agent - ERROR - prompt_loader.py:24 - [load_rag_prompts]在yaml配置文件中没有rag_prompt_path字段
+2026-05-04 22:54:42,427 - agent - ERROR - prompt_loader.py:30 - [load_rag_prompts]加载RAG提示词失败，错误信息：[Errno 2] No such file or directory: 'E:\\MyProjects\\agent-project\\agent-zstQA\\prompts/rag_summarize_prompt.txt'
